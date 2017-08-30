@@ -1,1 +1,1 @@
-# compressjavascript.github.io
+#Compress JavaScript
