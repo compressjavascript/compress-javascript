@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compress JavaScript – Minify your JS Files Online</title>
+	<meta content="Decrease the file size of your JavaScript files by using our online tool powered by UglifyJS3. Remove extra spaces, linebreaks, rename variables and more." name="description">
+	<meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+	<link href="https://compressjavascript.com/" rel="canonical">
+	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="abt-bg"></div>
+	<div id="abt-box">
+	  <div id="abt-head"><h3>About</h3><span id="abt-x"><i class="close"></i></span></div>
+		<div class="about">
+				<h3>Introduction</h3>
+				<p>CompressJavaScript is a free tool that you can use to compress/minify your JavaSript files online. It can make your web pages load faster by decreasing the size of the files served. This is an agressive compressor but safe to use at the same time resulting to a script that will function identically to the uncompressed code.</p>
+				<br>
+				<h3>How does it work?</h3>
+				<p>It works by removing all unnecessary white-spaces, semicolons, quotes, altering booleans, stripping comments and shrinking local variable names. It also removes line breaks making otherwise thousand lines of code into a single line.</p>
+				<br>
+				<p>CompressJavaScript uses a modified version of UglifyJS 3 for all JavaScript compression. Based on multiple tests, it is currently the best when it comes to reducing the file size of JavaScript files beating JSMin, Dean Edwards' Packer and YUICompressor by a significant margin.</p>
+		</div>
+	</div>
+
+
+<form>
+	<div class="top-pane">
+		<header>
+			<div class="brand">
+				<a href="/"><i class="logo"></i><h1>Compress JavaScript</h1></a>
+			</div>
+
+			<div class="tools">
+				<ul><li><a href="https://compresshtml.com/">HTML</a></li><li><a href="https://compresscss.net/">CSS</a></li><li class="selected"><a href="/">JS</a></li></ul>
+			</div>
+
+			<div class="links">
+				<ul>
+					<li><a href="#" id="abt-btn">About</a>
+					</li>
+
+					<li class="dropdown-btn"><a href="#">More Tools <i class="down"></i></a>
+						<ul class="dropdown">
+							<li class="shtml"><a href="https://compresshtml.com/">
+								<strong>Compress HTML</strong>
+								<span>Online HTML files compressor</span>
+							</a>
+							</li>
+							<li class="scss"><a href="https://compresscss.net/">
+								<strong>Compress CSS</strong>
+								<span>Online CSS files compressor</span>
+							</a>
+							</li>
+							<li class="snote"><a href="https://onlinenotepad.org/">
+								<strong>Online Notepad</strong>
+								<span>Simple browser-based text editor</span>
+							</a>
+							</li>
+							<li class="sfr"><a href="https://findreplace.org/">
+								<strong>Find & Replace</strong>
+								<span>Advanced search and replace tool</span>
+							</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="https://www.addtoany.com/share" rel="nofollow" onclick='window.open(this.href,"_blank","height=400,width=600");return false;'><i class="share"></i></a>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<div class="menu">
+			<div class="actions">
+				<ul><li><input type="button" value="Compress" id="minify-btn"></li><li><input type="button" value="Reset" class="reset" id="clear-all"></li><li><input type="button" value="Guide" id="how-btn"></li></ul>
+			</div>
+
+			<div id="savings">
+				<ul><li><span id="source_code"></span></li><li><span id="compressed"></span></li><li><span id="percent"></span></li></ul>
+			</div>
+
+			<div id="download">
+				<ul><li><input type="button" value="Download" id="saves" onclick="saveTextAsFile()"></li></ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="left-pane">
+		<textarea id="input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus></textarea>
+		<span class="label">Input</span>
+	</div>
+
+	<div class="right-pane">
+		<textarea id="output" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+		<span class="label">Output</span>
+		<div id="compressing">
+		  <div class="loader_wrap">
+		    <div id="loader">
+		      Compressing...
+		    </div>
+		  </div>
+		</div>
+		<div id="error"></div>
+	</div>
+
+  	<div id="options">
+		<input type="checkbox" id="minifyJS" checked>
+	</div>
+
+
+	<div id="how-bg"></div>
+	<div id="how-box">
+	  <div id="how-head"><h3>Guide</h3><span id="how-x"><i class="close"></i></span></div>
+		<div class="about">
+				<h3>Usage</h3>
+				<ol>
+					<li>You should keep a copy of the original .js file just in case you need to modify it again in the future.</li>
+					<li>Paste your JS code inside the input box (left side). Make sure to NOT include <code>&lt;script&gt;</code> tags.</li>
+					<li>Click the "Compress" button and wait for it to finish compressing.</li>
+					<li>Once finished, the minified JavaScript code should appear in the output box (right side).</li>
+				</ol>
+				<br>
+				<h3>Compatibility</h3>
+				<p>CompressJavaScript compressor is fully compatible with Google Chrome, Firefox, Opera, Safari, IE 10+, Edge and other modern browsers as long as JavaScipt is enabled.</p>
+		</div>
+	</div>
+
+	<div class="bottom-pane">
+		<style>
+		.JS_banner { width: 320px; height: 100px; }
+		@media(min-width: 472px) { .JS_banner { width: 468px; height: 100px; } }
+		@media(min-width: 732px) { .JS_banner { width: 728px; height: 90px; } }
+		</style>
+		<!-- JS_banner -->
+		<ins class="adsbygoogle JS_banner" style="display:inline-block" data-ad-client="ca-pub-2859608055830984" data-ad-slot="8022045931" data-adtest="on"></ins>
+		<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+	</div>
+</form>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/minifier.js"></script>
+	<script src="js/master.js"></script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</body>
+</html>
